@@ -1,16 +1,16 @@
-# # Check for defined environment
-# if [[ ! $1 ]]; then
-#     echo "--------------------------------------------------------------------"
-#     echo "You must specify your environment to continue (local, dev, prod)";
-#     echo "--------------------------------------------------------------------"
-#     exit 1;
-# elif [ "local" = $1 ]; then
-#   PUBLIC_PATH=/app/public
-# elif [ "dev" = $1 ]; then
-#   PUBLIC_PATH=/app/public
-# elif [ "prod" = $1 ]; then
-#   PUBLIC_PATH=/app/public
-# fi
+# Check for defined environment
+if [[ ! $1 ]]; then
+    echo "--------------------------------------------------------------------"
+    echo "You must specify your environment to continue (local, dev, prod)";
+    echo "--------------------------------------------------------------------"
+    exit 1;
+elif [ "local" = $1 ]; then
+  PUBLIC_PATH=/app/public
+elif [ "dev" = $1 ]; then
+  PUBLIC_PATH=/app/public
+elif [ "prod" = $1 ]; then
+  PUBLIC_PATH=/app/public
+fi
 
 # Make site directory
 mkdir ./wp-content
