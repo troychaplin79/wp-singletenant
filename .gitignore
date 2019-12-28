@@ -3,32 +3,23 @@ composer.json
 composer.lock
 composer.dev.json
 composer.dev.lock
+/vendor
+
+# Site Config
+site-config.php
+# /config/.env
+
+# Symlinks
+.htaccess
+wp
+wp-cli.yml
+wp-env.php
 
 # WordPress
-/app/*
-/config/*
-/vendor
-/assets/drop-ins/*
-/assets/mu-plugins/*
-/assets/plugins/*
-/assets/themes/*
-
-# Core Config Files
-!/_example
-!/app/wp-config.php
-!/assets/drop-ins/.gitkeep
-!/assets/mu-plugins/bedrock-autoloader.php
-!/assets/plugins/index.php
-!/assets/themes/index.php
-
-# Core Config Files
-!/config/.env.example
-!/config/.htaccess-standard
-!/config/.htaccess-multisite
-!/config/config.sh
-!/config/wp-constants.php
-!/config/wp-env.php
-!/config/wp-cli.yml
+/app/stable
+/wp-content/*
+!/wp-content/drop-ins/.gitkeep
+!/wp-content/mu-plugins/bedrock-autoloader.php
 
 # Temp
 install.sh

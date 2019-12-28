@@ -13,7 +13,7 @@ elif [ "prod" = $1 ]; then
 fi
 
 # Make site directory
-mkdir ./wp-content
+# mkdir ./wp-content
 mkdir ./wp-content/uploads
 
 echo -e "Directories for wp-content and uploads have been created"
@@ -30,18 +30,15 @@ sed \
 echo -e "Site configuration file have been created"
 
 # Create symlinks
-# ln -s $PUBLIC_PATH/config/wp-cli.yml ./wp-cli.yml
-# ln -s $PUBLIC_PATH/config/.htaccess-standard ./.htaccess
-# ln -s $PUBLIC_PATH/app/stable ./wp
+ln -s $PUBLIC_PATH/config/wp-cli.yml ./wp-cli.yml
+ln -s $PUBLIC_PATH/config/.htaccess-standard ./.htaccess
+ln -s $PUBLIC_PATH/app/stable ./wp
+# ln -s $PUBLIC_PATH/assets/drop-ins/advanced-cache.php ./wp-content/advanced-cache.php
+# ln -s $PUBLIC_PATH/assets/drop-ins/object-cache.php ./wp-content/object-cache.php
 # ln -s $PUBLIC_PATH/assets/mu-plugins ./wp-content/mu-plugins
 # ln -s $PUBLIC_PATH/assets/plugins ./wp-content/plugins
 # ln -s $PUBLIC_PATH/assets/themes ./wp-content/themes
-# ln -s $PUBLIC_PATH/config/db-config.php ./db-config.php
-# ln -s $PUBLIC_PATH/config/wp-env.php ./wp-env.php
-# ln -s $PUBLIC_PATH/drop-ins/advanced-cache.php ./wp-content/advanced-cache.php
-# ln -s $PUBLIC_PATH/drop-ins/db.php ./wp-content/db.php
-# ln -s $PUBLIC_PATH/drop-ins/db-error.php ./wp-content/db-error.php
-# ln -s $PUBLIC_PATH/drop-ins/object-cache.php ./wp-content/object-cache.php
+ln -s $PUBLIC_PATH/config/wp-env.php ./wp-env.php
 
 echo -e "\n--------------------------------------------------------------------\n"
 echo -e "Symlinks have been created"
