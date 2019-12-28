@@ -31,4 +31,4 @@ composer.dev.lock
 !/config/wp-cli.yml
 
 # Temp
-setup.sh
+install.sh
