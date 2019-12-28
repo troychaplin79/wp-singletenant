@@ -7,7 +7,7 @@ composer.dev.lock
 
 # Site Config
 site-config.php
-# /config/.env
+/config/.env
 
 # Symlinks
 .htaccess
@@ -17,8 +17,10 @@ wp-env.php
 
 # WordPress
 /app/stable
-/wp-content/*
-!/wp-content/drop-ins/.gitkeep
+/wp-content/drop-ins/*
+/wp-content/mu-plugins/*
+/wp-content/plugins/*
+/wp-content/themes/*
 !/wp-content/mu-plugins/bedrock-autoloader.php
 
 # Temp

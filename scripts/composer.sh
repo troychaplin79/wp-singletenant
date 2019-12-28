@@ -1,3 +1,6 @@
+## Create drop-ins folder
+mkdir -p wp-content/drop-ins
+
 ## Redis Object Cache
 cp wp-content/mu-plugins/redis-cache/includes/object-cache.php wp-content/drop-ins
 
