@@ -17,6 +17,7 @@ wp-env.php
 
 # WordPress
 /app/stable
+/wp-content/debug.log
 /wp-content/drop-ins/*
 /wp-content/mu-plugins/*
 /wp-content/plugins/*
