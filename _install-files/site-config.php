@@ -8,7 +8,16 @@
  * @version 1.0
  */
 
-define('DB_NAME', 'database_name');
+define('DB_NAME', 'SET_DBNAME');
+
+/**
+ * Set site specific database prefix
+ *
+ * @since WP Multi Tenant
+ * @package WordPress Constants
+ * @version 1.0
+ */
+$table_prefix = 'SET_PREFIX'; // @codingStandardsIgnoreLine
 
 /**
  * Multisite Specific Constants

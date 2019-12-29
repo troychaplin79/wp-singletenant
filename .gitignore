@@ -21,6 +21,7 @@ wp-env.php
 /wp-content/mu-plugins/*
 /wp-content/plugins/*
 /wp-content/themes/*
+/wp-content/uploads/*
 !/wp-content/mu-plugins/bedrock-autoloader.php
 
 # Temp

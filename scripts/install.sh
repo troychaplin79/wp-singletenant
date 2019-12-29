@@ -27,7 +27,8 @@ echo -e "Environment variable have been set"
 # Copy site config file
 cp ./_install-files/site-config.php ./site-config-tmp.php
 sed \
-    -e "s/database_name/$3/g" \
+    -e "s/SET_DBNAME/$3/g" \
+    -e "s/SET_PREFIX/$4/g" \
     ./site-config-tmp.php > ./site-config.php
     rm ./site-config-tmp.php
 echo -e "Site config file has been created"
