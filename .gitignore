@@ -1,12 +1,12 @@
 # Composer files
-composer.json
-composer.lock
-composer.dev.json
-composer.dev.lock
+/composer.json
+/composer.lock
+/composer.dev.json
+/composer.dev.lock
 /vendor
 
 # Site Config
-site-config.php
+/site-config.php
 /config/.env
 
 # Symlinks

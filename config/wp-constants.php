@@ -73,7 +73,7 @@ $wp_debug_log     = false;
 $wp_debug_display = false;
 
 // Enable debugging for dev environments
-if ('DEV' === getenv('ENV_CURRENT_ENV')) {
+if ('local' === getenv('ENV_CURRENT_ENV') || 'dev' === getenv('ENV_CURRENT_ENV')) {
     $wp_debug         = true;
     $wp_debug_log     = true;
     $wp_debug_display = true;
@@ -94,7 +94,7 @@ $wp_cache      = true;
 $disable_redis = false;
 
 // Disable cache for dev environments
-if ('DEV' === getenv('ENV_CURRENT_ENV')) {
+if ('local' === getenv('ENV_CURRENT_ENV') || 'dev' === getenv('ENV_CURRENT_ENV')) {
     $wp_cache      = false;
     $disable_redis = true;
 }

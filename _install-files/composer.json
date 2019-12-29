@@ -6,7 +6,7 @@
 	"require": {
 		"php": "^7.0",
 		"composer/installers": "1.*",
-		"johnpbloch/wordpress": "5.3.2",
+		"johnpbloch/wordpress": "*",
 		"vlucas/phpdotenv": "3.4.0",
 		"troychaplin79/wp-starter": "dev-develop",
 		"wpackagist-theme/twentynineteen": "@stable",

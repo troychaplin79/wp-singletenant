@@ -10,10 +10,13 @@ To install a new site, SSH into the root of the file server and run the followin
 
 ```
 cp ./scripts/install.sh ./
-bash install.sh environment databasename
+bash install.sh env url dbname
+
+cp ./scripts/install.sh ./ ; bash install.sh local v2.idocs.ca idc_v2
 ```
 
-- `environment` - use: local, dev, or prod
-- `databasename` - this is used to set the database name
+- `env` - use: local, dev, or prod
+- `url` - url without using `https://`
+- `dbname` - this is used to set the database name
 
 ---
