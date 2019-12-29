@@ -1,3 +1,7 @@
+## Prevent WordPress from editing htaccess files
+chmod 444 config/.htaccess-standard
+chmod 444 config/.htaccess-multisite
+
 ## Create drop-ins folder
 mkdir -p wp-content/drop-ins
 
