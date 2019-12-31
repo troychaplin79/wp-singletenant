@@ -9,6 +9,10 @@
 /site-config.php
 /config/.env
 
+# Site Files
+/_sites/*
+!/_sites/_example
+
 # Symlinks
 .htaccess
 wp

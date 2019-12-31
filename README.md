@@ -9,15 +9,13 @@ A custom composer configuration for a single install of WordPress
 To install a new site, SSH into the root of the file server and run the following command. Information about the available variables can be found below.
 
 ```
-cp ./scripts/install.sh ./
-bash install.sh env url database tableprefix
+cp ./scripts/setup.sh ./
+bash setup.sh env site install
 
-cp ./scripts/install.sh ./ ; bash install.sh local v2.idocs.ca idc_v2 idc
 ```
 
 - `env` - use: local, dev, or prod
-- `url` - url without using `https://`
-- `database` - set the database name
-- `tableprefix` - set db table prefix
+- `site` - specify the site you wish to setup, use folder names as they appear inside `_sites`
+- `install` - add this the first time you are setting up a local envionment for this site
 
 ---

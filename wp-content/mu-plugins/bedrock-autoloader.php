@@ -20,7 +20,7 @@ if (!is_blog_installed()) {
  * Class Autoloader
  * @package Roots\Bedrock
  * @author Roots
- * @link https://roots.io/
+ * @link https://roots.io
  */
 class Autoloader
 {

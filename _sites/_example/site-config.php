@@ -17,7 +17,7 @@ define('DB_NAME', 'SET_DBNAME');
  * @package WordPress Constants
  * @version 1.0
  */
-$table_prefix = 'SET_PREFIX'; // @codingStandardsIgnoreLine
+$table_prefix = 'SET_PREFIX_'; // @codingStandardsIgnoreLine
 
 /**
  * Multisite Specific Constants
