@@ -1,5 +1,4 @@
-<?php
-
+<?php // @codingStandardsIgnoreLine
 /**
  * Specify database name
  *
@@ -7,7 +6,6 @@
  * @package Site Configuration
  * @version 1.0
  */
-
 define('DB_NAME', getenv('DB_NAME'));
 
 /**

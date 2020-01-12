@@ -6,7 +6,6 @@
  * @package Site Configuration
  * @version 1.0
  */
-
 define('WP_USE_THEMES', true);
 
 /**

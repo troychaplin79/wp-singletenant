@@ -1,48 +1,48 @@
 {
-	"name": "troychaplin79/wp-singletenant",
-	"description": "A custom composer configuration for a single install of WordPress",
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"require": {
-		"php": "^7.0",
-		"composer/installers": "1.*",
-		"johnpbloch/wordpress": "*",
-		"vlucas/phpdotenv": "3.4.0",
-		"troychaplin79/wp-starter": "dev-develop",
-		"wpackagist-theme/twentynineteen": "@stable",
-		"wpackagist-plugin/debug-bar": "*",
-		"wpackagist-plugin/pj-page-cache-red": "*",
-		"wpackagist-plugin/query-monitor": "*",
-		"wpackagist-plugin/redis-cache": "*"
-	},
-	"repositories": [
-		{
-			"type": "composer",
-			"url": "https://wpackagist.org"
-		},
-		{
-			"type": "vcs",
-			"url": "https://github.com/troychaplin79/wp-starter"
-		}
-	],
-	"extra": {
-		"wordpress-install-dir": "app/stable",
-		"installer-paths": {
-			"wp-content/mu-plugins/{$name}/": [
-				"type:wordpress-muplugin",
-				"wpackagist-plugin/redis-cache",
-				"wpackagist-plugin/pj-page-cache-red"
-			],
-			"wp-content/plugins/{$name}/": [
-				"type:wordpress-plugin"
-			],
-			"wp-content/themes/{$name}/": [
-				"type:wordpress-theme"
-			]
-		}
-	},
-	"scripts": {
-		"post-install-cmd": "bash scripts/composer.sh",
-		"post-update-cmd": "bash scripts/composer.sh"
-	}
+    "name": "troychaplin79/wp-singletenant",
+    "description": "A custom composer configuration for a single install of WordPress",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.0",
+        "composer/installers": "1.*",
+        "johnpbloch/wordpress": "*",
+        "vlucas/phpdotenv": "3.4.0",
+        "troychaplin79/wp-starter": "dev-develop",
+        "wpackagist-theme/twentynineteen": "@stable",
+        "wpackagist-plugin/debug-bar": "*",
+        "wpackagist-plugin/pj-page-cache-red": "*",
+        "wpackagist-plugin/query-monitor": "*",
+        "wpackagist-plugin/redis-cache": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/troychaplin79/wp-starter"
+        }
+    ],
+    "extra": {
+        "wordpress-install-dir": "app/stable",
+        "installer-paths": {
+            "wp-content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin",
+                "wpackagist-plugin/redis-cache",
+                "wpackagist-plugin/pj-page-cache-red"
+            ],
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": "bash scripts/composer.sh",
+        "post-update-cmd": "bash scripts/composer.sh"
+    }
 }

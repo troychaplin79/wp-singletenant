@@ -36,5 +36,4 @@ require_once getenv('WP_CONFIG_PATH') . '/wp-constants.php';
 if (! defined('ABSPATH')) {
     define('ABSPATH', dirname(__FILE__) . '/wp/');
 }
-
 require_once ABSPATH . 'wp-settings.php';
