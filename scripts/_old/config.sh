@@ -1,15 +1,3 @@
-# Check for env
-if [[ ! $1 ]]; then
-    echo "Specify environment to continue (local, dev, prod)";
-    exit 1;
-elif [ "local" = $1 ]; then
-  PUBLIC_PATH=/app/public
-elif [ "dev" = $1 ]; then
-  PUBLIC_PATH=/path-to-server
-elif [ "prod" = $1 ]; then
-  PUBLIC_PATH=/path-to-server
-fi
-
 # Setup files and folders
 # mkdir ./wp-content/uploads
 # chmod 777 ./wp-content/uploads
@@ -33,10 +21,10 @@ sed \
 echo -e "Site config file has been created"
 
 # Build symlinks
-ln -s $PUBLIC_PATH/app/stable ./wp
-ln -s $PUBLIC_PATH/config/.htaccess-standard ./.htaccess
-ln -s $PUBLIC_PATH/config/wp-cli.yml ./wp-cli.yml
-ln -s $PUBLIC_PATH/config/wp-env.php ./wp-env.php
+ln -s /app/public/app/stable ./wp
+ln -s /app/public/config/.htaccess-standard ./.htaccess
+ln -s /app/public/config/wp-cli.yml ./wp-cli.yml
+ln -s /app/public/config/wp-env.php ./wp-env.php
 echo -e "Symlinks have been added"\
 
 # Final clean-up
