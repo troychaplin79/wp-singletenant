@@ -18,8 +18,8 @@ fi
 
 # Copy site config files
 cp ./_sites/$2/.env.$1 ./config/.env
-cp ./_sites/$2/composer.json .
 cp ./_sites/$2/composer.sh ./scripts/
+cp ./_sites/$2/composer.json .
 cp ./_sites/$2/site-config.php .
 
 # Build symlinks on install

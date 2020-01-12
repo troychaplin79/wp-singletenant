@@ -8,6 +8,7 @@
 # Site Config
 /site-config.php
 /config/.env
+/scripts/composer.sh
 
 # Site Files
 /_sites/*
