@@ -8,7 +8,7 @@
  * @version 1.0
  */
 
-define('DB_NAME', 'SET_DBNAME');
+define('DB_NAME', getenv('DB_NAME'));
 
 /**
  * Set site specific database prefix
