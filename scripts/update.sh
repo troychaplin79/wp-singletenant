@@ -1,9 +1,8 @@
 # Create uploads folder on install
-if [ "install" = $2 ]; then
+if [[ $2 ]]; then
     mkdir ./wp-content/uploads
     chmod 777 ./wp-content/uploads
 fi
-
 # Copy site config files
 cp ./_sites/$1/.env.local ./config/.env
 cp ./_sites/$1/composer.sh ./scripts/
@@ -11,7 +10,7 @@ cp ./_sites/$1/composer.json .
 cp ./_sites/$1/site-config.php .
 
 # Build symlinks on install
-if [ "install" = $2 ]; then
+if [[ $2 ]]; then
     ln -s /app/public/app/stable ./wp
     ln -s /app/public/config/.htaccess-standard ./.htaccess
     ln -s /app/public/config/wp-cli.yml ./wp-cli.yml
