@@ -10,8 +10,8 @@ To install or update a site using previously create config files, SSH into the r
 
 ```
 cp ./scripts/update.sh ./
-bash update.sh site install
-
+bash update.sh site {{install}}
+composer update
 ```
 
 -   `site` - specify the site you wish to setup, use folder names as they appear inside `_sites`
