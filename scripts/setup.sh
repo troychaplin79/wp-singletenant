@@ -15,7 +15,7 @@ ln -s /app/public/config/wp-env.php ./wp-env.php
 
 # Copy setup files
 cp ./_setup/composer.json ./composer.json
-cp ./_setup/composer.sh ./scripts/composer.json
+cp ./_setup/composer.sh ./scripts/composer.sh
 
 # User specified environment
 echo -e "\nSet your environment";
