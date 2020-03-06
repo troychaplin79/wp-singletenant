@@ -10,8 +10,24 @@ ln -s /app/public/config/wp-cli.yml ./wp-cli.yml
 ln -s /app/public/config/wp-env.php ./wp-env.php
 
 # User specified environment
-echo -e "\nSet your environment: LOCAL, DEV, STAGING, PROD";
-read setup_env
+echo -e "\nSet your environment";
+PS3='Choose option 1, 2 or 3: '
+options=("local" "dev" "prod")
+select setup_env in "${options[@]}"
+do
+    case $setup_env in
+        "local")
+            break
+            ;;
+        "dev")
+            break
+            ;;
+        "prod")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
 echo -e "\n"
 
 # User specified url

@@ -30,4 +30,4 @@ wp-env.php
 !/wp-content/mu-plugins/bedrock-autoloader.php
 
 # Temp
-install.sh
+setup.sh
