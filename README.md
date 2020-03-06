@@ -31,7 +31,7 @@ The second step will download WordPress and a few plugins via composer. You can 
 composer update
 ```
 
-### Bonus Section: About Composer
+## Bonus Section: About Composer
 
 For all composer commands, you can run either `composer update` or `composer install`. The key difference is that using install will not upgrade any of the dependencies beyond what it store in the `composer.lock` file. The lock file is generate when the update command is used.
 
@@ -39,7 +39,7 @@ Composer offers several options that can be passed while running an update or in
 
 There are also a series of [Global Options](https://getcomposer.org/doc/03-cli.md#global-options) that can be used with any command.
 
-#### Example: Production Composer Command
+### Example: Production Composer Command
 
 This command is intended for a production environment as the `--no-interaction` option will prevent any interactive questions from being asked, while the `--prefer-dist` will install all packages from dist wherever possible.
 
@@ -47,7 +47,7 @@ This command is intended for a production environment as the `--no-interaction` 
 composer update --no-interaction --prefer-dist
 ```
 
-#### Example: Using Multiple Composer Files
+### Example: Using Multiple Composer Files
 
 If you want to use multiple composer files, see the command below. A benefit of multiple composer files would be to have one for dev, and another for prod. The prod version could then be versioned locked to prevent an unwanted or untested upgrade
 
