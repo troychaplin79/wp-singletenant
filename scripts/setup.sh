@@ -1,3 +1,7 @@
+## Prevent WordPress from editing htaccess files
+chmod 444 config/.htaccess-standard
+chmod 444 config/.htaccess-multisite
+
 # Create uploads folder on install
 mkdir ./wp-content/drop-ins
 mkdir ./wp-content/uploads
@@ -8,6 +12,10 @@ ln -s /app/public/app/stable ./wp
 ln -s /app/public/config/.htaccess-standard ./.htaccess
 ln -s /app/public/config/wp-cli.yml ./wp-cli.yml
 ln -s /app/public/config/wp-env.php ./wp-env.php
+
+# Copy setup files
+cp ./_setup/composer.json ./composer.json
+cp ./_setup/composer.sh ./scripts/composer.json
 
 # User specified environment
 echo -e "\nSet your environment";
@@ -46,7 +54,7 @@ read setup_prefix
 echo -e "\n"
 
 # Build env variables
-cp ./_example/.env.local ./config/.env.local-tmp
+cp ./_setup/.env.local ./config/.env.local-tmp
 sed \
     -e "s/SET_ENV/$setup_env/g" \
     -e "s/SET_URL/$setup_url/g" \
@@ -56,7 +64,7 @@ sed \
 echo -e "Environment variable have been set"
 
 # # Build site config file
-cp ./_example/site-config.php ./site-config-tmp.php
+cp ./_setup/site-config.php ./site-config-tmp.php
 sed \
     -e "s/SET_PREFIX/$setup_prefix/g" \
     ./site-config-tmp.php > ./site-config.php
