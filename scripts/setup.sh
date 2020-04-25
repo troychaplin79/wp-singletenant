@@ -33,7 +33,7 @@ done
 echo -e "\n"
 
 # User specified path
-echo "Specify wpsingletenant pwd (EG: /www/public/htdocs)"
+echo "Specify path to the wp-singletenent repo (EG: /www/public/htdocs)"
 read setup_pwd
 echo -e "\n"
 

@@ -6,24 +6,23 @@ A custom composer configuration for a single install of WordPress
 
 ## Getting Started
 
-The following guide will walk your through setting up a WordPress singletenant environment using Local by Flywheel, but these instructions can be easily changed and adapted to function on just about any other local development setup, or a dev, staging or production server.
+The following guide will walk your through setting up a WordPress singletenant environment for `local dev`, or on a `dev`, `staging` or `production` server.
 
-## Initial Setup
+## Getting Started
 
 The setup takes two quick steps.
 
-### Step One: Setup Script
+### Step 1: Setup Script
 
-In the first step you will copy and run a script that will prompt you for specific information about this setup. To run the setup script you need to **SHH into** you Flywheel site and run the 3 commands below.
+SSH into you local or server environment and navigate to the wp-singeltenant repo location and use the following to start configuring the site.
 
 ```
-cd app/public
 cp ./scripts/setup.sh ./
 bash setup.sh
 exit
 ```
 
-### Step Two: Composer
+### Step 2: Composer
 
 The second step will download WordPress and a few plugins via composer. You can customize what will be installed, edit the `composer.json` file that sits at the base of this repo. To run composer, open a terminal window, navigate to where this repo lives on your machine, then run:
 
@@ -31,7 +30,7 @@ The second step will download WordPress and a few plugins via composer. You can 
 composer update
 ```
 
-## Bonus Section: About Composer
+## Additional Composer
 
 For all composer commands, you can run either `composer update` or `composer install`. The key difference is that using install will not upgrade any of the dependencies beyond what it store in the `composer.lock` file. The lock file is generate when the update command is used.
 
