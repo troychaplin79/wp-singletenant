@@ -75,6 +75,6 @@ sed \
 echo -e "Site config file has been created"
 
 # Final clean-up
-# rm setup.sh
+rm setup.sh
 
 echo -e "Site setup completed\n"
