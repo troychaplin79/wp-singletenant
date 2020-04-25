@@ -46,7 +46,7 @@ read setup_url
 echo -e "\n"
 
 # User specified database name
-echo "Set your database user (eg: homestead)"
+echo "Set your database user"
 read setup_dbuser
 echo -e "\n"
 
@@ -66,14 +66,14 @@ read setup_dbname
 echo -e "\n"
 
 # User specified database prefix
-echo "Set your database prefix, include the underscore (eg: wp_)"
+echo "Set your database prefix (include the underscore, eg: wp_)"
 read setup_prefix
 echo -e "\n"
 
 # Setup multisite
 echo -e "\nDo you want to setup a multisite install?";
 PS3='Choose option 1 or 2: '
-options=("Yes" "No")
+options=("true" "false")
 select setup_multisite in "${options[@]}"
 do
     case $setup_multisite in

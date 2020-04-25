@@ -10,25 +10,21 @@ The following guide will walk your through setting up a WordPress singletenant e
 
 ## Getting Started
 
-The setup takes two quick steps.
-
-### Step 1: Setup Script
-
-SSH into your local or server environment and navigate to the wp-singeltenant repo location and use the following to start configuring the site.
+The setup takes three quick steps. SSH into your machine and navigate to where you copied the files from this repo.
 
 ```
 cp ./scripts/setup.sh ./
 bash setup.sh
+composer update
 exit
 ```
 
-### Step 2: Composer
+About the setup commands
 
-The second step will download WordPress and a few plugins via composer. You can customize what will be installed, edit the `composer.json` file that sits at the base of this repo. To run composer, open a terminal window, navigate to where this repo lives on your machine, then run:
-
-```
-composer update
-```
+-   `cp ./scripts/setup.sh ./` - copies the setup script to the install root, and will self-delete once the configuration has been compleded
+-   `bash setup.sh` - runs the setup script, and uses the answers provide to build and copy key config files
+-   `composer update` - this will install WordPress and other dependencies. The composer.json file that gets copied to the install root can be modified before or after running this
+-   `exit` - finishes you ssh session and logs out of the server
 
 ## Additional Composer
 
