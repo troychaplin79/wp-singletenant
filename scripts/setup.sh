@@ -46,6 +46,21 @@ read setup_url
 echo -e "\n"
 
 # User specified database name
+echo "Set your database user (eg: homestead)"
+read setup_dbuser
+echo -e "\n"
+
+# User specified database name
+echo "Set your database password"
+read setup_dbpass
+echo -e "\n"
+
+# User specified database name
+echo "Set your database host"
+read setup_dbhost
+echo -e "\n"
+
+# User specified database name
 echo "Set your database name"
 read setup_dbname
 echo -e "\n"
@@ -55,12 +70,34 @@ echo "Set your database prefix, include the underscore (eg: wp_)"
 read setup_prefix
 echo -e "\n"
 
+# Setup multisite
+echo -e "\nDo you want to setup a multisite install?";
+PS3='Choose option 1 or 2: '
+options=("Yes" "No")
+select setup_multisite in "${options[@]}"
+do
+    case $setup_multisite in
+        "true")
+            break
+            ;;
+        "false")
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
+echo -e "\n"
+
 # Build env variables
 cp ./_setup/.env.local ./config/.env.local-tmp
 sed \
+    -e "s/SET_DBUSER/$setup_dbuser/g" \
+    -e "s/SET_DBPASS/$setup_dbpass/g" \
+    -e "s/SET_DBHOST/$setup_dbhost/g" \
+    -e "s/SET_DBNAME/$setup_dbname/g" \
     -e "s/SET_ENV/$setup_env/g" \
     -e "s/SET_URL/$setup_url/g" \
-    -e "s/SET_DBNAME/$setup_dbname/g" \
+    -e "s/SET_MULTISITE/$setup_multisite/g" \
     -e "s/SET_BASEPATH/${setup_basepath//\//\\/}/g" \
     ./config/.env.local-tmp > ./config/.env
     rm ./config/.env.local-tmp
