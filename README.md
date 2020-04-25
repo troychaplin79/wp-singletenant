@@ -14,7 +14,7 @@ The setup takes two quick steps.
 
 ### Step 1: Setup Script
 
-SSH into you local or server environment and navigate to the wp-singeltenant repo location and use the following to start configuring the site.
+SSH into your local or server environment and navigate to the wp-singeltenant repo location and use the following to start configuring the site.
 
 ```
 cp ./scripts/setup.sh ./

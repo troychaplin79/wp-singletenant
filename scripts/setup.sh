@@ -7,6 +7,13 @@ mkdir ./wp-content/drop-ins
 mkdir ./wp-content/uploads
 chmod 777 ./wp-content/uploads
 
+# Build symlinks on install
+setup_path=$(pwd)
+ln -s $setup_path/app/stable ./wp
+ln -s $setup_path/config/.htaccess-standard ./.htaccess
+ln -s $setup_path/config/wp-cli.yml ./wp-cli.yml
+ln -s $setup_path/config/wp-env.php ./wp-env.php
+
 # Copy setup files
 cp ./_setup/composer.json ./composer.json
 cp ./_setup/composer.sh ./scripts/composer.sh
@@ -31,17 +38,6 @@ do
     esac
 done
 echo -e "\n"
-
-# User specified path
-echo "Specify path to the wp-singletenent repo (EG: /www/public/htdocs)"
-read setup_path
-echo -e "\n"
-
-# Build symlinks on install
-ln -s $setup_path/app/stable ./wp
-ln -s $setup_path/config/.htaccess-standard ./.htaccess
-ln -s $setup_path/config/wp-cli.yml ./wp-cli.yml
-ln -s $setup_path/config/wp-env.php ./wp-env.php
 
 # User specified url
 echo "Set your site URL (excluding the https://)"
