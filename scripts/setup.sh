@@ -7,12 +7,6 @@ mkdir ./wp-content/drop-ins
 mkdir ./wp-content/uploads
 chmod 777 ./wp-content/uploads
 
-# Build symlinks on install
-ln -s /app/public/app/stable ./wp
-ln -s /app/public/config/.htaccess-standard ./.htaccess
-ln -s /app/public/config/wp-cli.yml ./wp-cli.yml
-ln -s /app/public/config/wp-env.php ./wp-env.php
-
 # Copy setup files
 cp ./_setup/composer.json ./composer.json
 cp ./_setup/composer.sh ./scripts/composer.sh
@@ -37,6 +31,17 @@ do
     esac
 done
 echo -e "\n"
+
+# User specified path
+echo "Specify wpsingletenant pwd (EG: /www/public/htdocs)"
+read setup_pwd
+echo -e "\n"
+
+# Build symlinks on install
+ln -s $setup_pwd/app/stable ./wp
+ln -s $setup_pwd/config/.htaccess-standard ./.htaccess
+ln -s $setup_pwd/config/wp-cli.yml ./wp-cli.yml
+ln -s $setup_pwd/config/wp-env.php ./wp-env.php
 
 # User specified url
 echo "Set your site URL (excluding the https://)"
