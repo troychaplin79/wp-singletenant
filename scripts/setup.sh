@@ -34,14 +34,14 @@ echo -e "\n"
 
 # User specified path
 echo "Specify path to the wp-singletenent repo (EG: /www/public/htdocs)"
-read setup_pwd
+read setup_path
 echo -e "\n"
 
 # Build symlinks on install
-ln -s $setup_pwd/app/stable ./wp
-ln -s $setup_pwd/config/.htaccess-standard ./.htaccess
-ln -s $setup_pwd/config/wp-cli.yml ./wp-cli.yml
-ln -s $setup_pwd/config/wp-env.php ./wp-env.php
+ln -s $setup_path/app/stable ./wp
+ln -s $setup_path/config/.htaccess-standard ./.htaccess
+ln -s $setup_path/config/wp-cli.yml ./wp-cli.yml
+ln -s $setup_path/config/wp-env.php ./wp-env.php
 
 # User specified url
 echo "Set your site URL (excluding the https://)"
@@ -64,6 +64,7 @@ sed \
     -e "s/SET_ENV/$setup_env/g" \
     -e "s/SET_URL/$setup_url/g" \
     -e "s/SET_DBNAME/$setup_dbname/g" \
+    -e "s/SET_PATH/$setup_path/g" \
     ./config/.env.local-tmp > ./config/.env
     rm ./config/.env.local-tmp
 echo -e "Environment variable have been set"

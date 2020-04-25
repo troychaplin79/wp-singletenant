@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Include wp-config file from individual install
  *

@@ -20,7 +20,7 @@ define('DB_COLLATE', '');
  * @package WordPress Constants
  * @version 1.0
  */
-define('WP_INSTALL_DIR', getenv('ENV_PUBLICPATH') . '/');
+define('WP_INSTALL_DIR', getenv('ENV_BASEPATH') . '/');
 
 /**
  * Set Home and Admin URLs
