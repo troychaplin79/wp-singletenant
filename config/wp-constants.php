@@ -133,3 +133,12 @@ define('ADMIN_COOKIE_PATH', '/');
 define('COOKIE_DOMAIN', '');
 define('COOKIEPATH', '/');
 define('SITECOOKIEPATH', '');
+
+/**
+ * Plugin specific contstants
+ *
+ * @since WP Multi Tenant
+ * @package WordPress Constants
+ * @version 1.0
+ */
+define('ACF_EXPERIMENTAL_PRELOAD_BLOCKS', true);
