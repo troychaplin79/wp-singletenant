@@ -8,7 +8,7 @@
 /scripts/composer.sh
 
 # Site Files
-/_sites/*
+/_sites
 
 # Symlinks
 .htaccess
