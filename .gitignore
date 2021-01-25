@@ -20,11 +20,11 @@ wp-env.php
 /app/stable
 /wp-content/debug.log
 /wp-content/object-cache.php
-/wp-content/drop-ins/*
-/wp-content/mu-plugins/*
-/wp-content/plugins/*
-/wp-content/themes/*
-/wp-content/uploads/*
+/wp-content/drop-ins*
+/wp-content/mu-plugins*
+/wp-content/plugins*
+/wp-content/themes*
+/wp-content/uploads*
 !/wp-content/mu-plugins/bedrock-autoloader.php
 
 # Temp
