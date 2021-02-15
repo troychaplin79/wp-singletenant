@@ -118,8 +118,8 @@ define('DISALLOW_FILE_EDIT', true);
  * @package WordPress Constants
  * @version 1.0
  */
-define('AUTOSAVE_INTERVAL', 160);
-define('WP_POST_REVISIONS', 5);
+define('AUTOSAVE_INTERVAL', 600);
+define('WP_POST_REVISIONS', false);
 define('EMPTY_TRASH_DAYS', 7);
 
 /**
